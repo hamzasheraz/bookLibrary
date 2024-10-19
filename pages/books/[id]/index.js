@@ -1,5 +1,6 @@
 import Footer from "@/components/layout/footer";
 import Navbar from "@/components/layout/navbar";
+import Link from "next/link";
 import { books, getEachBookData } from "@/helper";
 
 const BookDetails = ({ book }) => {
@@ -8,7 +9,7 @@ const BookDetails = ({ book }) => {
             <Navbar route='/genres' name='Back' />
             <div className="container my-5">
                 <h1 className="display-4">{book.title}</h1>
-                <h5 className="text-muted">Author: {book.author}</h5>
+                <Link className="text-muted" href={`/books/${book.id}/author`}>Author: {book.author}</Link>
                 <p className="lead">{book.description}</p>
                 <p className="font-weight-bold text-success">Price: ${book.price.toFixed(2)}</p>
                 <p className="text-muted">Genre: {book.genre}</p>
