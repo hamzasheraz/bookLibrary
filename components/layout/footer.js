@@ -1,6 +1,6 @@
 const Footer = () => {
     return (
-        <footer className="bg-dark text-white text-center py-4">
+        <footer className="bg-dark text-white text-center py-4 mt-auto navbar fixed-bottom">
             <div className="container">
                 <p className="mb-0">&copy; {new Date().getFullYear()} BookLibrary. All Rights Reserved.</p>
                 <div>
@@ -9,7 +9,6 @@ const Footer = () => {
                 </div>
             </div>
         </footer>
-
     )
 }
 
