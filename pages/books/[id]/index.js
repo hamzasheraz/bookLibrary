@@ -39,7 +39,8 @@ export async function getStaticProps(context) {
     }
 
     return {
-        props: { book }
+        props: { book },
+        revalidate: 1000,
     }
 }
 
