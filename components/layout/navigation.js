@@ -3,7 +3,12 @@ import { useRouter } from 'next/router';
 const Navigation = ({ route,name }) => {
     const router = useRouter();
     const handleViewGenres = () => {
-        router.push('/' + route);
+        if(name === 'View Genres'){
+            router.push('/' + route);
+            return;
+        }
+        else
+        router.back();
     };
     return (
         <button className="btn btn-outline-light" onClick={() => handleViewGenres()}>
