@@ -3,10 +3,9 @@ import Navbar from "@/components/layout/navbar";
 import { books, getEachBookData } from "@/helper";
 
 const BookDetails = ({ book }) => {
-    console.log(book);
     return (
         <>
-            <Navbar route='/genres' name='Back to Genres' />
+            <Navbar route='/genres' name='Back' />
             <div className="container my-5">
                 <h1 className="display-4">{book.title}</h1>
                 <h5 className="text-muted">Author: {book.author}</h5>
