@@ -18,4 +18,8 @@ export async function getAllGenres() {
     return genres;
 }
 
+export async function getAllAuthor(){
+    return authors;
+}
+
 export { books, genres, authors };
