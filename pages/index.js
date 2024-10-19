@@ -1,6 +1,7 @@
 import { books } from "@/helper";
 import Navbar from "@/components/layout/navbar";
 import Bookcard from "@/components/layout/bookcard";
+import Footer from "@/components/layout/footer";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
           })}
         </div>
       </main>
+      <Footer/>
     </div>
   );
 }
