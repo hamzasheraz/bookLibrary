@@ -1,9 +1,9 @@
-import { genres } from "@/helper";
 import Link from "next/link";
 import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
+import { getAllGenres } from "@/helper";
 
-const Genres = () => {
+const Genres = ({ genres }) => {
     return (
         <div className="min-vh-100 bg-light">
             <Navbar route='' name='Back to Home' />
@@ -20,6 +20,22 @@ const Genres = () => {
             <Footer />
         </div>
     );
+}
+
+export async function getServerSideProps() {
+    const genres = await getAllGenres();
+
+    if (!genres) {
+        return {
+            notFound: true
+        }
+    }
+
+    return {
+        props: {
+            genres
+        }
+    }
 }
 
 export default Genres

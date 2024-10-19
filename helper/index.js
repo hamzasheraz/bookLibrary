@@ -14,4 +14,8 @@ export async function getEachBookData(id) {
     return { ...book, author, genre };
 }
 
+export async function getAllGenres() {
+    return genres;
+}
+
 export { books, genres, authors };
