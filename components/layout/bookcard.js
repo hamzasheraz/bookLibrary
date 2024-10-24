@@ -11,7 +11,7 @@ const Bookcard = ({book}) => {
           <h5 className="card-title">{book.title}</h5>
           <p className="card-text"><small className="text-muted">Genre: {genre_name}</small></p>
           <p className="font-weight-bold text-success">${book.price.toFixed(2)}</p>
-          <button class name="btn btn-primary" onClick={()=>router.push(`/books/${book.id}`)}>View Details</button>
+          <button className="btn btn-primary" onClick={()=>router.push(`/books/${book.id}`)}>View Details</button>
         </div>
       </div>
     </div>
