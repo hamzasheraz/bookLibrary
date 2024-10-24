@@ -15,7 +15,8 @@ const Navigation = ({ route,name }) => {
         <button className="btn btn-outline-light me-2" onClick={() => handleViewGenres()}>
             {name}
         </button>
-        <button className="btn btn-outline-light" onClick={() =>router.push('/authors')}>View Authors</button>
+        <button className="btn btn-outline-light me-2" onClick={() =>router.push('/authors')}>View Authors</button>
+        <button className="btn btn-outline-light" onClick={() =>router.push('/search')}>Search Books</button>
         </>
     )
 }

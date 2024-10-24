@@ -4,7 +4,7 @@ import { ThemeContext } from "@/theme";
 
 const Navbar = ({ route, name }) => {
   const { theme, toggleTheme } = useContext(ThemeContext);
-  
+
   return (
     <header className={`py-4 ${theme === "light" ? "bg-info text-white" : "bg-dark text-white"}`}>
       <div className="container d-flex justify-content-between align-items-center">
