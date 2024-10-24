@@ -1,10 +1,13 @@
 import { useRouter } from 'next/router';
 import Footer from "@/components/layout/footer";
 import Navbar from "@/components/layout/navbar";
+import { useContext } from "react";
+import { ThemeContext } from "@/theme";
 
 const InfoPage = () => {
     const router = useRouter();
     const { slug } = router.query;
+    const { theme } = useContext(ThemeContext);
 
     const renderContent = () => {
         if (!slug) return <h2>Loading...</h2>;
@@ -22,7 +25,7 @@ const InfoPage = () => {
     };
 
     return (
-        <div>
+        <div className={`${theme === "light" ? "bg-light text-dark" : "bg-dark text-white"} min-vh-100`}>
             <Navbar route='/' name='Home' />
             <div className="container mt-5">
                 {renderContent()}
