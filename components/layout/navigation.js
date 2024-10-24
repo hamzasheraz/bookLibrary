@@ -1,4 +1,3 @@
-import { Button } from 'bootstrap';
 import { useRouter } from 'next/router';
 
 const Navigation = ({ route,name }) => {
