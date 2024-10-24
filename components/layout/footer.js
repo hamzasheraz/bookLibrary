@@ -1,6 +1,9 @@
 import Link from "next/link"
+import { useContext } from "react";
+import { ThemeContext } from "@/theme";
 
-const Footer = ({ theme }) => {
+const Footer = () => {
+    const { theme } = useContext(ThemeContext);
     return (
         <footer className={`bg-${theme === 'dark' ? 'white' : 'dark'} ${theme === "dark" ? "text-dark" : "text-white"} text-center py-4 mt-auto navbar fixed-bottom`}>
             <div className="container">

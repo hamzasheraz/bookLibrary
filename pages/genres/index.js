@@ -2,10 +2,13 @@ import Link from "next/link";
 import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
 import { getAllGenres } from "@/helper";
+import { useContext } from "react";
+import { ThemeContext } from "@/theme";
 
 const Genres = ({ genres }) => {
+    const { theme } = useContext(ThemeContext);
     return (
-        <div className="min-vh-100 bg-light">
+        <div className={`min-vh-100 ${theme === "light" ? "bg-light" : "bg-dark text-white"}`}>
             <Navbar route='' name='Back to Home' />
             <main className="container my-5">
                 <h2 className="h3 mb-4">Available Genres</h2>
